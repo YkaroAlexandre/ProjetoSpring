@@ -30,7 +30,7 @@ public class WebController implements WebMvcConfigurer {
 		}
 
 		System.out.printf("Nome: %s%n",personForm.getName());
-		System.out.printf("Data de nascimento: %s/%s/%s%n", personForm.getDates(),personForm.getMonths(),personForm.getYears());
+		System.out.printf("Data de nascimento: %s%n", personForm.getData());
 		System.out.printf("Nome da Mãe: %s%n", personForm.getNameMun());
 		System.out.printf("Nome do Pai: %s%n", personForm.getNameDad());
 		System.out.printf("Telefone: (%s)%s ", personForm.getDdd(),personForm.getTel());

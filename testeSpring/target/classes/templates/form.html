@@ -8,7 +8,6 @@
             border-radius: 5px;
             background-color: beige;
             }
-            
         </style>
     </head>
     <body>
@@ -29,8 +28,8 @@
                 </tr>
                 <tr>
                     <td>Nascimento (dd/mm/aaaa):</td>
-                    <td style="align-items: center;"><input type="text" th:field="*{dates}" size="2px"/> / <input type="text" th:field="*{months}" size="2px"/> / <input type="text" th:field="*{years}" size="2px"/></td>
-                    <td th:if="${#fields.hasErrors('years')}" th:errors="*{years}">Erro no Ano</td>
+                    <td style="align-items: center;"><input type="date" th:field="*{data}" size="2px"/></td>
+                    <td th:if="${#fields.hasErrors('data')}" th:errors="*{data}">Erro no Ano</td>
                 </tr>
                 <tr>
                     <td>Nome da Mãe:</td>
@@ -45,8 +44,10 @@
 
                 <tr>
                     <td>Telefone: </td>
-                    <td> DDD (<input type="text" th:field="*{ddd}" size="2px"/>) Tel:<input type="text" th:field="*{tel}" size="7px"/>  Ramal: <input type="text" th:field="*{ramal}" size="3px"/></td>
+                    <td> DDD (<input type="number" th:field="*{ddd}"/>) Tel:<input type="number" th:field="*{tel}" size="7px"/>  Ramal: <input type="number" th:field="*{ramal}" size="3px"/></td>
+                    <td th:if="${#fields.hasErrors('ddd')}" th:errors="*{ddd}">Erro no ddd</td>
                     <td th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}">Erro no Telefone</td>
+                    <td th:if="${#fields.hasErrors('ramal')}" th:errors="*{ramal}">Erro no ramal</td>
                 </tr>
                 <tr>
                     <td>E-mail: </td>
@@ -86,15 +87,23 @@
                         <input type="radio" name="Manhã" value="Manhã" th:field="*{turno}">Manhã<br>
                         <input type="radio" name="Tarde" value="Tarde" th:field="*{turno}">Tarde<br>
                         <input type="radio" name="Noite" value="Noite" th:field="*{turno}">Noite 
+                        
                     </td>
                     <td>
                         
-                        <input type="checkbox" value="Informática" th:field="*{atvdExCurricular}"> Informática<br>
-                        <input type="checkbox" value="Música" th:field="*{atvdExCurricular}"> Música<br>
-                        <input type="checkbox" value="Balet" th:field="*{atvdExCurricular}"> Balet<br>
-                        <input type="checkbox" value="Pintura" th:field="*{atvdExCurricular}"> Pintura<br>
-                        <input type="checkbox" value="Judô" th:field="*{atvdExCurricular}"> Judô<br>
+                        <input type="checkbox" th:value="Informática" th:field="*{atvdExCurricular}"> Informática<br>
+                        <input type="checkbox" th:value="Música" th:field="*{atvdExCurricular}"> Música<br>
+                        <input type="checkbox" th:value="Balet" th:field="*{atvdExCurricular}"> Balet<br>
+                        <input type="checkbox" th:value="Pintura" th:field="*{atvdExCurricular}"> Pintura<br>
+                        <input type="checkbox" th:value="Judô" th:field="*{atvdExCurricular}"> Judô<br>
                     </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td th:if="${#fields.hasErrors('turno')}" th:errors="*{turno}">Erro na Série</td>
+                    <td th:if="${#fields.hasErrors('atvdExCurricular')}" th:errors="*{atvdExCurricular}">Erro nas Atividades </td>
                 </tr>
             </table>
             <tr>
