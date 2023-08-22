@@ -17,12 +17,12 @@ public class WebController implements WebMvcConfigurer {
 		registry.addViewController("/results").setViewName("results");
 	}
 
-	@GetMapping("https://testazure-springapp.azuremicroservices.io")
+	@GetMapping("/")
 	public String showForm(PersonForm personForm) {
 		return "form";
 	}
 
-	@PostMapping("https://testazure-springapp.azuremicroservices.io")
+	@PostMapping("/")
 	public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindingResult) {
 
 		if (bindingResult.hasErrors()) {
