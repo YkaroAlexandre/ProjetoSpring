@@ -17,12 +17,12 @@ public class WebController implements WebMvcConfigurer {
 		registry.addViewController("/results").setViewName("results");
 	}
 
-	@GetMapping("/")
+	@GetMapping("52.41.36.82")
 	public String showForm(PersonForm personForm) {
 		return "form";
 	}
 
-	@PostMapping("/")
+	@PostMapping("52.41.36.82")
 	public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindingResult) {
 
 		if (bindingResult.hasErrors()) {
