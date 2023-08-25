@@ -13,4 +13,4 @@ Projeto de PWEB, página html e Java
 
 
 <h3>Link para página do fomulário:</h3>
-<a href="https://testazure-springapp.azuremicroservices.io/">Formulário</a>
+<a href="https://testazure-springapp.azuremicroservices.io/" target="_blank">Formulário</a>
