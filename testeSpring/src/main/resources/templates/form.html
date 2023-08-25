@@ -29,8 +29,8 @@
                 </tr>
                 <tr>
                     <td>Nascimento (dd/mm/aaaa):</td>
-                    <td style="align-items: center;"><input type="text" th:field="*{dates}" size="2px"/> / <input type="text" th:field="*{months}" size="2px"/> / <input type="text" th:field="*{years}" size="2px"/></td>
-                    <td th:if="${#fields.hasErrors('years')}" th:errors="*{years}">Erro no Ano</td>
+                    <td ><input type="date" th:field="*{data}" size="2px"/> </td>
+                    
                 </tr>
                 <tr>
                     <td>Nome da Mãe:</td>
@@ -86,15 +86,24 @@
                         <input type="radio" name="Manhã" value="Manhã" th:field="*{turno}">Manhã<br>
                         <input type="radio" name="Tarde" value="Tarde" th:field="*{turno}">Tarde<br>
                         <input type="radio" name="Noite" value="Noite" th:field="*{turno}">Noite 
+                        
                     </td>
                     <td>
                         
-                        <input type="checkbox" value="Informática" th:field="*{atvdExCurricular}"> Informática<br>
-                        <input type="checkbox" value="Música" th:field="*{atvdExCurricular}"> Música<br>
-                        <input type="checkbox" value="Balet" th:field="*{atvdExCurricular}"> Balet<br>
-                        <input type="checkbox" value="Pintura" th:field="*{atvdExCurricular}"> Pintura<br>
-                        <input type="checkbox" value="Judô" th:field="*{atvdExCurricular}"> Judô<br>
+                        <input type="checkbox" value="Informática" name="Informática" th:field="*{atvdExCurricular}"> Informática<br>
+                        <input type="checkbox" value="Música" name="Música" th:field="*{atvdExCurricular}"> Música<br>
+                        <input type="checkbox" value="Balet" name="Balet" th:field="*{atvdExCurricular}"> Balet<br>
+                        <input type="checkbox" value="Pintura" name="Pintura" th:field="*{atvdExCurricular}"> Pintura<br>
+                        <input type="checkbox" value="Judô" name="Judô" th:field="*{atvdExCurricular}"> Judô<br>
                     </td>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td th:if="${#fields.hasErrors('turno')}" th:errors="*{turno}">Erro no turno</td>
+
+                        <td th:if="${#fields.hasErrors('atvdExCurricular')}" th:errors="*{atvdExCurricular}">Erro nas atividades</td>
+                    </tr>
                 </tr>
             </table>
             <tr>
