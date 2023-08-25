@@ -17,12 +17,12 @@ public class WebController implements WebMvcConfigurer {
 		registry.addViewController("/results").setViewName("results");
 	}
 
-	@GetMapping("52.41.36.82")
+	@GetMapping("/")
 	public String showForm(PersonForm personForm) {
 		return "form";
 	}
 
-	@PostMapping("52.41.36.82")
+	@PostMapping("/")
 	public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindingResult) {
 
 		if (bindingResult.hasErrors()) {
@@ -38,7 +38,9 @@ public class WebController implements WebMvcConfigurer {
 		System.out.printf("Email: %s%n", personForm.getEmail());
 		System.out.printf("Série: %s%n", personForm.getSerie());
 		System.out.printf("Turno: %s%n", personForm.getTurno());
-		System.out.printf("Atividades Extracurriculares: %s%n", personForm.getAtvdExCurricular());
+		for(String i : personForm.getAtvdExCurricular()){
+			System.out.println(i);
+		}
 
 		return "redirect:/results";
 	}
