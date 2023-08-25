@@ -10,3 +10,7 @@ Projeto de PWEB, página html e Java
 <p>Preencher o formulário como preferir</p>
 <p>No caso de o preenchimento tiver sido feido da maneira certa, você será redirecionado para outra página mostrando que teve sucesso.</p>
 <p>Caso contrário, aparecerá o que está errado.</p>
+
+
+<h3>Link para página do fomulário:</h3>
+<a href="https://testazure-springapp.azuremicroservices.io/">Formulário</a>
