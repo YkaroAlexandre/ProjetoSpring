@@ -7,6 +7,6 @@ Projeto de PWEB, página html e Java
 <h3>2º</h3>
 <p>Quando ele carregar, abra uma página na Web e no campo de perquisa, coloque: http://localhost:8080/</p>
 <h3>3º</h3>
-<p>Preencher o formulário como preferir</p>
-<p>No caso de o preenchimento tiver sido feido da maneira certa, você será redirecionado para outra página mostrando que teve sucesso.</p>
+<p>Preencher o formulário como preferir;</p>
+<p>No caso de o preenchimento tiver sido feido da maneira certa, você será redirecionado para outra página mostrando que teve sucesso;</p>
 <p>Caso contrário, aparecerá o que está errado.</p>
